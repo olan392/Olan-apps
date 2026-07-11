@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Olan Apps - Download apps and tools made by Olan for Android devices.">
     <meta name="keywords" content="Olan Apps, Android apps, mobile apps, Android tools, utilities, apps by Olan">
-    <title>olan apps</title>
+    <title>Olan Apps</title>
+    <style>
+      :root{
+        --bg1:#0f172a;
+        --bg2:#1e293b;
+        --accent:#7c3aed;
+        --accent-2:#5b21b6;
+        --text:#e6eef8;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(135deg,var(--bg1),var(--bg2));
+        color:var(--text);
+        font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing:antialiased;
+        padding:2rem;
+      }
+      .container{
+        width:100%;
+        max-width:640px;
+        background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+        border-radius:12px;
+        padding:2rem;
+        text-align:center;
+        box-shadow:0 8px 30px rgba(2,6,23,0.6);
+        border:1px solid rgba(255,255,255,0.03);
+      }
+      h1{
+        margin:0 0 .25rem 0;
+        font-size:clamp(1.5rem,4vw,2rem);
+        text-transform:capitalize;
+        letter-spacing:0.6px;
+      }
+      p.lead{margin:.25rem 0 1.25rem;color:rgba(230,238,248,0.9)}
+      .download-btn{
+        display:inline-flex;
+        align-items:center;
+        gap:.6rem;
+        padding:.75rem 1rem;
+        background:linear-gradient(90deg,var(--accent),var(--accent-2));
+        color:white;
+        border:none;
+        border-radius:10px;
+        font-weight:600;
+        text-decoration:none;
+        box-shadow:0 10px 30px rgba(124,58,237,0.18);
+        transition:transform .14s ease,box-shadow .14s ease;
+        cursor:pointer;
+      }
+      .download-btn:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(124,58,237,0.25)}
+      .download-btn:active{transform:translateY(0)}
+      .download-btn svg{flex:0 0 auto;stroke:currentColor}
+      .small{font-size:.85rem;color:rgba(230,238,248,0.75);margin-top:1rem}
+      .footer{margin-top:1.5rem;font-size:.8rem;color:rgba(230,238,248,0.6)}
+      @media (prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important}}
+    </style>
   </head>
   <body>
-    <h1>Olan Apps</h1>
-    <a href="https://olan392.github.io/Olan-apps/apps/ProgBoard-debug.apk" download="ProgBoard-debug.apk">
-      <button>Download ProgBoard</button>
-    </a>
+    <div class="container">
+      <h1>Olan Apps</h1>
+      <p class="lead">Download apps and tools made by Olan for Android devices.</p>
+      <a class="download-btn" href="https://olan392.github.io/Olan-apps/apps/ProgBoard-debug.apk" download="ProgBoard-debug.apk" aria-label="Download ProgBoard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download ProgBoard
+      </a>
+      <div class="small">Install APKs from trusted sources only.</div>
+      <div class="footer">Built by Olan</div>
+    </div>
   </body>
 </html>
